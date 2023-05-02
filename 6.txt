@@ -1,0 +1,7 @@
+protected void sendSMSMessage() {
+        Uri str = Uri.parse("sms:");
+        Intent sendIntent = new Intent(Intent.ACTION_SENDTO, str);
+        sendIntent.putExtra("sms_body", "message txt");
+        startActivity(sendIntent);
+        Toast.makeText(getApplicationContext(), "SMS sent", Toast.LENGTH_LONG).show();
+    }
